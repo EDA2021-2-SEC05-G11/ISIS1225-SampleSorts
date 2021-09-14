@@ -91,6 +91,7 @@ def sortBooks(catalog, size):
     """
     Ordena los libros por average_rating
     """
+    print('inicio controller')
     return model.sortBooks(catalog, size)
 
 

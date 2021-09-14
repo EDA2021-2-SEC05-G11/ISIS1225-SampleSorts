@@ -189,7 +189,7 @@ def compareauthors(authorname1, author):
 
 def compareratings(book1, book2):
     # TODO completar modificaciones para el laboratorio 4
-    return (float(book1['average_rating']) > float(book2['average_rating']))
+    return (float(book1['average_rating']) < float(book2['average_rating']))
 
 
 def comparetagnames(name, tag):
@@ -203,10 +203,12 @@ def comparetagnames(name, tag):
 
 def sortBooks(catalog, size):
     # TODO completar modificaciones para el laboratorio 4
+    print(str('inicio metodo'))
     sub_list = lt.subList(catalog['books'], 1, size)
     sub_list = sub_list.copy()
     start_time = time.process_time()
-    sa.sort(sub_list, compareratings)
+    sorted_list = sa.sort(sub_list, compareratings)
     stop_time = time.process_time()
     elapsed_time_mseg = (stop_time - start_time)*1000
-    return elapsed_time_mseg
+    print(sorted_list)
+    return elapsed_time_mseg, sorted_list
