@@ -25,6 +25,7 @@ import sys
 import controller
 from DISClib.ADT import list as lt
 assert cf
+from time import process_time
 
 default_limit = 1000
 sys.setrecursionlimit(default_limit*10)
@@ -121,6 +122,7 @@ while True:
         authorname = input("Nombre del autor a buscar: ")
         author = controller.getBooksByAuthor(catalog, authorname)
         printAuthorData(author)
+        print(process_time())
 
     elif int(inputs[0]) == 4:
         label = input("Etiqueta a buscar: ")
@@ -133,7 +135,7 @@ while True:
         result = controller.sortBooks(catalog, int(size))
         print("Para la muestra de", size, " elementos, el tiempo (mseg) es: ",
                                         str(result[0]))
-
+    
     else:
         sys.exit(0)
 sys.exit(0)
