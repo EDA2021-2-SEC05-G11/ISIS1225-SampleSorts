@@ -1,5 +1,9 @@
-Estudiante 1: Lucciano Franco 202111458
-Estudiante 2: Lina Ojeda 202112324
+Estudiante 1: Lucciano Franco
+correo: l.francom@uniandes.edu.co
+codigo: 202111458
+Estudiante 2: Lina Ojeda 
+correo: l.ojedaa@uniandes.edu.co
+codigo: 202112324
 
 
 
